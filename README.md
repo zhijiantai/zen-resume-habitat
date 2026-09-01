@@ -1,93 +1,74 @@
-# Zen Capability Resume
+# Zen Tai — Evidence-Based Capability Resume
 
-> Evidence-derived resume habitat for Zen Tai
+> A third-person capability profile derived from repeated behavior, engineering artifacts, projects, and experiments.
 
-這不是傳統的職缺匹配評估，也不是人格分類或自我宣傳。這是一份以歷史行為、工程 artifacts、研究實驗與可反駁條件為基礎的**第三人稱能力模型**。
-
-## Profile
+## Profile Summary
 
 Zen Tai appears to be a **model-oriented systems engineer** who repeatedly:
 
 - converts ambiguous systems into explicit entities, relations, constraints, and hypotheses;
-- updates or retires models when reliable evidence conflicts with them;
-- reasons about uncertainty through competing explanations and graded confidence;
-- externalizes working context into portable artifacts for humans and AI systems;
+- revises or retires models when reliable evidence conflicts with them;
+- reasons about uncertainty using competing explanations and graded confidence;
+- externalizes complex context into portable artifacts for humans and AI systems;
 - turns recurring reasoning or engineering friction into reusable tools and workflows.
 
-這段總結是對 `zen-capability-world-v1` 的壓縮，不是獨立的新證據。完整 evidence contract 與 boundaries 請見 [`ws-zen-capability-world-v1.yaml`](./ws-zen-capability-world-v1.yaml)。
+This summary is a compressed view of [`ws-zen-capability-world-v1.yaml`](./ws-zen-capability-world-v1.yaml). It is not independent evidence.
 
 ## Strongest Supported Capabilities
 
 | Capability | Evidence-based description | Confidence |
 |---|---|---:|
-| Explicit model construction | 將複雜或模糊系統轉成可操作的 representation：entities、relations、constraints、states、invariants、hypotheses。 | High |
-| Evidence-driven model revision | 以 prediction → evidence → contradiction → assumption inspection → revision/retirement 的循環修正模型。 | High |
-| Uncertainty reasoning | 使用 Bayesian reasoning、likelihood comparison、hidden-state models 與 graded confidence，避免把 belief 當 fact。 | High |
-| Problem externalization | 將隱含脈絡轉成 World Slice、Coding Blueprint、Habitat state 等可攜 artifact。 | High |
-| Reusable tool construction | 從重複 friction 找出機制，進一步自動化、外部化、dogfood、refine。 | High |
+| Explicit model construction | Converts complex or ambiguous systems into manipulable representations: entities, relations, constraints, states, invariants, and hypotheses. | High |
+| Evidence-driven model revision | Uses the cycle model → prediction → evidence → contradiction → assumption inspection → revision or retirement. | High |
+| Uncertainty reasoning | Uses Bayesian reasoning, likelihood comparison, hidden-state models, confidence updates, and competing hypotheses. | High |
+| Problem externalization | Converts implicit reasoning context into inspectable, reusable artifacts such as World Slices and Coding Blueprints. | High |
+| Reusable tool construction | Converts repeated cognitive or engineering friction into automation, representations, workflows, and reusable systems. | High |
 
-## Plausible, Still Under Validation
+## Capabilities Under Validation
 
-以下是合理但尚未完全建立的 hypotheses，不應在沒有新 evidence 時寫成確定能力：
+These remain hypotheses rather than established facts:
 
-- **Structural cross-domain transfer** — 能否把一個 domain 的深層 structural pattern 有效映射到另一個 domain。
-- **Explanation as model validation** — 解釋與互動提問是否同時用來暴露自身模型缺口。
-- **Knowledge compression** — 是否主要透過 relational models 連接新知，而非儲存孤立 facts。
-- **Mental simulation** — 模型穩定後，是否會透過改變 state、entity 或 constraint 來模擬下游結果。
+- Structural cross-domain transfer
+- Explanation as model validation
+- Knowledge compression through relational models
+- Mental simulation of downstream consequences
 
-## Working Method
+## Evidence and Boundaries
 
-```text
-Observe complexity
-  → construct model
-  → expose structure
-  → generate hypotheses
-  → predict evidence
-  → update model
-  → externalize or build tool
-  → communicate / delegate
-  → use questions and failures to reveal missing structure
-```
+- Observation is not capability.
+- Self-description is not independent evidence.
+- Contradictory evidence and alternative explanations must be preserved.
+- Unsupported mechanisms remain hypotheses.
+- Implementation evidence takes priority over narrative claims.
+- Confidence must not exceed the evidence.
+- A coherent model is not necessarily a correct model.
 
-## Evidence Contract
+## Project and Artifact Evidence
 
-- Observation ≠ capability。
-- Capability 必須來自 repeated behavior 的 inference。
-- Self-description 不是 independent evidence。
-- Contradictory evidence 與 alternative explanations 必須保留。
-- Unsupported mechanisms 只能標成 hypothesis。
-- Implementation evidence 優先於 narrative claim。
-- Confidence 不得高於 evidence。
+The following projects and artifacts are referenced by the World Slice. URLs will be added after confirmation:
 
-## Boundaries
+| # | Project / artifact | Referenced as |
+|---:|---|---|
+| 1 | FDP-003 | Evidence-driven model revision |
+| 2 | EXP-SR-002 | State representation experiment |
+| 3 | EXP-SR-003 | Replicated YAML → Narrative format experiment |
+| 4 | EXP-METH-001 | Methodological experiment design |
+| 5 | EXP-METH-004 | Methodological model revision |
+| 6 | Odds-inflation methodology revision | Research methodology |
+| 7 | Cashflow Expected World vs Actual World | Explicit problem modeling |
+| 8 | Competing Minimart operational models | Explicit problem modeling |
+| 9 | Historical performance-analysis automation | Reusable tooling |
+| 10 | CI / deployment tooling | Engineering automation |
+| 11 | Coding Blueprint | Context externalization and transfer |
+| 12 | World Slice | Structured reasoning artifact |
+| 13 | Habitat | Context reconstruction and persistence |
+| 14 | Specification-to-JIRA hackathon tool | Reusable developer tooling |
+| 15 | SEALer_G | Narrative coherence boundary / counterexample |
+| 16 | Kalman filtering → world-state reasoning | Cross-domain transfer hypothesis |
+| 17 | Control systems → AI reasoning | Cross-domain transfer hypothesis |
 
-模型建立能力不等於模型必然正確。主要風險包括：
+## Falsification Direction
 
-1. **Model misspecification** — 錯誤的 boundaries 或 relations 會排除真實解法。
-2. **Narrative coherence** — 解釋可能比 implementation evidence 更完整；`SEALer_G` 是已知警示案例。
-3. **Structural mapping error** — surface similarity 可能被誤認為 structural equivalence。
-4. **Prior model dominance** — 既有模型可能影響 evidence 的注意與解讀。
-5. **Initial modeling cost** — 缺乏 semantic/structural anchor 的問題，初始建模成本可能較高。
+The model should be weakened if repeated unfamiliar tasks show direct solution attempts without model reconstruction; if strong counterevidence is repeatedly ignored; or if cross-domain mappings are mainly surface analogies whose transferred solutions fail target-domain constraints.
 
-## How to Read This Resume
-
-- 想看公開摘要：讀本頁。
-- 想看 claim 如何由 observations 推導：讀 `ws-zen-capability-world-v1.yaml` 的 `observations`、`capabilities`。
-- 想看尚未證實的部分：讀 `hypotheses`、`boundaries`、`predictions`。
-- 想挑戰模型：讀 `falsification`，提出能削弱或推翻 claim 的 evidence。
-- 想加入新材料：先增加 observation/provenance，再更新 inference；不要直接改高階 conclusion。
-
-## Status
-
-- World Slice: `zen-capability-world-v1`
-- Model type: evidence-derived capability model
-- Perspective: third person
-- Overall confidence: medium-high
-- Current state: initial version; designed for evidence-backed iteration
-
-## Repository Map
-
-- [`index.md`](./index.md) — Habitat entry protocol
-- [`world-slice-index.yaml`](./world-slice-index.yaml) — inventory and roadmap
-- [`ws-zen-capability-world-v1.yaml`](./ws-zen-capability-world-v1.yaml) — source World Slice
-- [`.ai/`](./.ai/) — local Habitat operating state; not part of the public resume narrative
+For the complete observations, inferred capabilities, hypotheses, boundaries, predictions, and falsification conditions, see the full World Slice.
