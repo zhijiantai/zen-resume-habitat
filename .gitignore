@@ -1,0 +1,5 @@
+.DS_Store
+*.bak.md
+.ai/.env/
+.ai/logs/
+.ai/artifact/

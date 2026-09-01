@@ -1,0 +1,711 @@
+world_slice:
+  id: zen-capability-world-v1
+  type: evidence_derived_capability_model
+  subject: Zen Tai
+
+  purpose: >
+    Reconstruct a third-person model of Zen's demonstrated capabilities
+    from historical behavior, engineering artifacts, projects, and experiments.
+
+  non_goals:
+    - job_fit_evaluation
+    - personality_classification
+    - self_promotion
+    - psychological_diagnosis
+
+  epistemic_contract:
+    perspective: third_person
+
+    rules:
+      - observations_are_not_capabilities
+      - capabilities_are_inferred_from_repeated_behavior
+      - self_description_is_not_independent_evidence
+      - contradictory_evidence_must_be_preserved
+      - alternative_explanations_must_be_preserved
+      - unsupported_mechanisms_remain_hypotheses
+      - implementation_evidence_overrides_narrative_claims
+      - confidence_must_not_exceed_evidence
+
+
+# ============================================================
+# 1. OBSERVED BEHAVIOR
+# ============================================================
+
+observations:
+
+  O1_explicit_problem_modeling:
+    pattern: >
+      Zen repeatedly restructures ambiguous or complex problems into
+      explicit entities, relations, constraints, states, invariants,
+      hypotheses, or competing worlds before attempting resolution.
+
+    evidence_status: strong
+
+    historical_examples:
+      - structured ENTITY / RELATION evaluation
+      - ALA hypothesis-world construction
+      - Cashflow Expected World vs Actual World
+      - competing Minimart operational models
+      - World Slice formalization
+
+    temporal_note: >
+      Similar structured reasoning behavior appears before the
+      formalization of World Slice.
+
+  O2_evidence_driven_revision:
+    pattern: >
+      Zen has repeatedly weakened, restructured, or rejected models
+      he previously proposed when later evidence undermined them.
+
+    evidence_status: strong
+
+    examples:
+      - FDP-003
+      - EXP-SR-002
+      - EXP-METH-004
+      - odds-inflation methodology revision
+
+    notable_behavior: >
+      Positive or attractive results were not automatically preserved
+      when methodological problems were discovered.
+
+  O3_probabilistic_reasoning:
+    pattern: >
+      Zen frequently represents uncertainty through competing hypotheses,
+      evidence, likelihood changes, confidence, hidden state, or posterior
+      belief rather than treating uncertain conclusions as binary facts.
+
+    evidence_status: strong
+
+    observed_domains:
+      - quantitative finance
+      - market regime reasoning
+      - LLM behavior experiments
+      - research methodology
+      - decision systems
+
+  O4_explanation_through_models:
+    pattern: >
+      Zen frequently attempts to reconstruct complex mechanisms through
+      simpler causal or structural models and then tests the model through
+      continued questioning.
+
+    evidence_status: medium
+
+    recurring_forms:
+      - "does this mean..."
+      - analogy construction
+      - causal-chain reconstruction
+      - counterexample exploration
+      - repeated boundary questions
+
+  O5_externalization:
+    pattern: >
+      Internal reasoning structures are repeatedly converted into external
+      artifacts that can be inspected or reused by humans or AI systems.
+
+    evidence_status: strong
+
+    examples:
+      - World Slice
+      - Coding Blueprint
+      - Habitat state
+      - hypothesis/evidence records
+      - structured code-review alignment
+      - meeting and bug-context World Slices
+
+  O6_tool_building:
+    pattern: >
+      When repeated cognitive or engineering friction is identified,
+      Zen often attempts to convert the solution into reusable tooling,
+      workflow, or representation rather than repeatedly solving the
+      same problem manually.
+
+    evidence_status: strong
+
+    examples:
+      - historical performance-analysis automation
+      - CI / deployment tooling
+      - Coding Blueprint
+      - World Slice
+      - Habitat
+      - specification-to-JIRA hackathon tool
+
+
+# ============================================================
+# 2. INFERRED CAPABILITIES
+# ============================================================
+
+capabilities:
+
+  C1_explicit_model_construction:
+
+    capability: >
+      Converts complex or ambiguous systems into explicit,
+      manipulable representations.
+
+    confidence: high
+
+    derived_from:
+      - O1_explicit_problem_modeling
+      - O5_externalization
+
+    typical_representation:
+      - entities
+      - relations
+      - constraints
+      - state
+      - invariants
+      - competing hypotheses
+
+    likely_useful_for:
+      - system understanding
+      - debugging
+      - architecture reasoning
+      - research framing
+      - context transfer
+
+    boundary: >
+      A coherent representation does not guarantee that the
+      representation contains the correct world.
+
+
+  C2_evidence_driven_model_revision:
+
+    capability: >
+      Updates or abandons an existing model when sufficiently strong
+      evidence conflicts with its predictions or assumptions.
+
+    confidence: high
+
+    derived_from:
+      - O2_evidence_driven_revision
+      - O3_probabilistic_reasoning
+
+    characteristic_behavior:
+      model
+        -> prediction
+        -> evidence
+        -> contradiction
+        -> inspect_assumptions
+        -> revise_or_retire_model
+
+    notable_strength: >
+      Historical examples include revision of Zen's own positive
+      experimental conclusions.
+
+    boundary: >
+      Existing models can still influence which evidence is noticed
+      or how evidence is interpreted.
+
+
+  C3_uncertainty_reasoning:
+
+    capability: >
+      Reasons about uncertain systems using competing hypotheses
+      and graded confidence rather than requiring premature certainty.
+
+    confidence: high
+
+    derived_from:
+      - O3_probabilistic_reasoning
+
+    recurring_tools:
+      - Bayesian reasoning
+      - likelihood comparison
+      - hidden-state models
+      - confidence updates
+      - competing hypotheses
+
+    behavior:
+      belief_is_not_equivalent_to_fact: true
+      belief_is_not_equivalent_to_action: true
+
+
+  C4_problem_externalization:
+
+    capability: >
+      Converts implicit reasoning context into portable representations
+      that other humans or AI systems can inspect, continue, or challenge.
+
+    confidence: high
+
+    derived_from:
+      - O5_externalization
+      - O6_tool_building
+
+    examples:
+      code_understanding:
+        implicit_context
+          -> code_world_slice
+          -> conversational_exploration
+
+      implementation:
+        JIRA_and_code
+          -> Coding_Blueprint
+          -> junior_developer
+
+      review:
+        FR
+          -> developer_analysis
+          -> code_diff
+
+      knowledge_transfer:
+        meeting_or_bug_context
+          -> structured_world
+          -> another_team_member
+
+
+  C5_reusable_tool_construction:
+
+    capability: >
+      Recognizes repeated work or reasoning friction and attempts
+      to encode the solution into reusable systems or workflows.
+
+    confidence: high
+
+    derived_from:
+      - O6_tool_building
+
+    recurring_pattern:
+      friction
+        -> understand_mechanism
+        -> automate_or_externalize
+        -> dogfood
+        -> refine
+
+    historical_span: >
+      This pattern appears across early engineering tooling,
+      production software work, and recent AI systems.
+
+
+# ============================================================
+# 3. CAPABILITY HYPOTHESES
+# ============================================================
+
+hypotheses:
+
+  H1_model_based_reasoning:
+
+    hypothesis: >
+      Zen reasons most effectively after constructing a coherent
+      internal model that can be manipulated or simulated.
+
+    confidence: medium_high
+
+    explains:
+      - explicit model construction
+      - causal questioning
+      - counterfactual exploration
+      - preference for mechanisms over isolated facts
+      - externalization into World Slices
+
+    predicts:
+      - high_performance_after_model_construction
+      - repeated_attempts_to_reconstruct_missing_structure
+      - difficulty_accepting_unconnected_facts_as_understanding
+
+    alternative_explanations:
+      - accumulated_systems_engineering_experience
+      - learned_research_methodology
+
+
+  H2_structural_cross_domain_transfer:
+
+    hypothesis: >
+      After identifying a sufficiently strong structural correspondence
+      between domains, Zen can transfer reasoning patterns or solutions
+      from the known domain into the new domain.
+
+    confidence: medium
+
+    strongest_supported_example:
+
+      source_domain:
+        quantitative_finance
+
+      structure:
+        prior
+          -> evidence
+          -> likelihood_change
+          -> posterior
+
+      target_domain:
+        AI_hypothesis_evaluation
+
+      transferred_structure:
+        hypothesis
+          -> experimental_evidence
+          -> odds_update
+          -> revised_confidence
+
+    proposed_mechanism:
+      target_problem
+        -> construct_model
+        -> search_known_models
+        -> candidate_structural_mapping
+        -> validate_mapping
+        -> transfer_solution
+        -> translate_domain_narrative
+        -> validate_against_target_constraints
+
+    unresolved_examples:
+      - Kalman_filtering_to_world_state_reasoning
+      - control_systems_to_AI_reasoning
+
+    insufficiently_supported_examples:
+      - Git_branching_to_alternative_worlds
+      - graph_spider_to_symbolic_reasoning
+
+    alternative_explanation:
+      broad_domain_expertise
+
+
+  H3_explanation_as_model_validation:
+
+    hypothesis: >
+      Zen uses explanation and interactive questioning not only
+      to communicate knowledge but also to expose gaps in his own model.
+
+    confidence: medium
+
+    proposed_loop:
+      construct_model
+        -> explain_simply
+        -> receive_question_or_counterexample
+        -> traverse_model
+        -> expose_missing_relation
+        -> revise_model
+
+    predicts:
+      - frequent_reformulation
+      - analogy_generation
+      - follow_up_questions
+      - progressive_simplification_after_understanding
+
+    limitation:
+      historical behavior supports the pattern,
+      but internal cognitive mechanism cannot be directly observed.
+
+
+  H4_knowledge_compression:
+
+    hypothesis: >
+      Zen tends to retain and manipulate knowledge by connecting
+      new concepts to existing relational models rather than storing
+      them as isolated facts.
+
+    confidence: medium
+
+    predicted_benefits:
+      - reusable_reasoning_patterns
+      - cross_domain_transfer
+      - conceptual_compression
+
+    predicted_cost:
+      high_initial_modeling_cost_when_no_structural_anchor_exists
+
+
+  H5_mental_simulation:
+
+    hypothesis: >
+      Once a model is sufficiently coherent, Zen uses changes in
+      entities, constraints, or state to mentally simulate downstream
+      consequences.
+
+    confidence: medium
+
+    observable_prediction:
+      Given a understood system, Zen should frequently ask:
+        - what_happens_if_X_changes
+        - what_should_we_observe_if_H_is_true
+        - which_downstream_state_should_change
+        - what_evidence_would_break_the_model
+
+
+# ============================================================
+# 4. CAPABILITY BOUNDARIES
+# ============================================================
+
+boundaries:
+
+  B1_model_misspecification:
+
+    risk: >
+      Explicit models reduce complexity by excluding possibilities.
+      Incorrect boundaries or relations can therefore exclude the
+      true solution.
+
+    implication:
+      model_consistency_is_not_equivalent_to_world_correctness
+
+
+  B2_narrative_coherence:
+
+    risk: >
+      Strong model-building ability can produce coherent explanations
+      whose conceptual completeness exceeds implementation evidence.
+
+    known_case:
+      SEALer_G
+
+    observation: >
+      Conceptual claims and intended architecture are stronger than
+      currently demonstrated implementation evidence.
+
+    mitigation:
+      - provenance
+      - implementation_check
+      - counterevidence
+      - explicit_confidence
+
+
+  B3_structural_mapping_error:
+
+    risk: >
+      Surface similarity between domains can be mistaken for
+      structural equivalence.
+
+    required_mitigation:
+      - map_entities
+      - map_relations
+      - identify_invariants
+      - test_predictions
+      - verify_target_constraints
+      - search_counterexamples
+
+
+  B4_prior_model_dominance:
+
+    risk: >
+      Strong existing mental models may affect how incoming evidence
+      is interpreted.
+
+    mitigation:
+      - competing_hypotheses
+      - adversarial_evidence
+      - source_reliability
+      - explicit_assumptions
+
+
+  B5_initial_modeling_cost:
+
+    hypothesis: >
+      Problems without meaningful semantic or structural anchors may
+      impose unusually high initial modeling cost.
+
+    confidence: medium
+
+    predicted_behavior:
+      performance_can_change_non_linearly_after_a_valid_mapping_is_found
+
+
+# ============================================================
+# 5. OBSERVED META-PATTERN
+# ============================================================
+
+meta_pattern:
+
+  recurring_cycle:
+
+    observe_complexity:
+      -> construct_model
+
+    construct_model:
+      -> expose_entities_relations_constraints
+
+    expose_structure:
+      -> generate_hypotheses
+
+    hypotheses:
+      -> predict_evidence
+
+    evidence:
+      -> update_model
+
+    repeated_friction:
+      -> externalize_or_build_tool
+
+    externalized_model:
+      -> communicate_or_delegate
+
+    questions_and_failures:
+      -> reveal_missing_structure
+
+    missing_structure:
+      -> reconstruct_model
+
+
+# ============================================================
+# 6. GENERATIVE EXPLANATION
+# ============================================================
+
+generative_model:
+
+  status: hypothesis
+
+  description: >
+    A substantial portion of Zen's observed engineering, research,
+    learning, and developer-tooling behavior may be generated by a
+    common tendency to convert implicit complexity into explicit,
+    manipulable models and then use evidence to test and revise them.
+
+  possible_derivations:
+
+    model_construction:
+      -> World_Slice
+
+    repeated_context_reconstruction:
+      -> Habitat
+
+    implementation_context_transfer:
+      -> Coding_Blueprint
+
+    model_vs_implementation_alignment:
+      -> FR_DevAnalysis_CodeDiff_review
+
+    uncertainty_and_competing_explanations:
+      -> Bayesian_hypothesis_evaluation
+
+  important_constraint: >
+    This generative model is an explanatory hypothesis.
+    The artifacts do not prove the internal cognitive mechanism.
+
+
+# ============================================================
+# 7. PREDICTIONS
+# ============================================================
+
+predictions:
+
+  P1_ambiguous_system:
+
+    given:
+      unfamiliar_complex_system_with_incomplete_information
+
+    predicted_behavior:
+      Zen will attempt to identify entities, relations,
+      constraints and hidden assumptions before committing
+      to a solution.
+
+    confidence: high
+
+
+  P2_counterevidence:
+
+    given:
+      strong_reliable_evidence_against_current_model
+
+    predicted_behavior:
+      Zen is likely to inspect assumptions and revise,
+      weaken or retire the model.
+
+    confidence: high
+
+
+  P3_cross_domain_problem:
+
+    given:
+      unfamiliar_problem_with_a_possible_known_structural_analogue
+
+    predicted_behavior:
+      Zen will attempt structural mapping and may reuse
+      reasoning or solutions from the source domain.
+
+    confidence: medium
+
+
+  P4_explanation:
+
+    given:
+      newly_understood_complex_concept
+
+    predicted_behavior:
+      Zen will attempt to compress it into a simpler causal
+      explanation or analogy.
+
+    confidence: medium
+
+
+  P5_repeated_developer_friction:
+
+    given:
+      recurring_manual_or_cognitive_engineering_work
+
+    predicted_behavior:
+      Zen will tend toward building a reusable tool,
+      representation, checklist, or workflow.
+
+    confidence: high
+
+
+# ============================================================
+# 8. FALSIFICATION
+# ============================================================
+
+falsification:
+
+  C1_explicit_model_construction:
+    weakened_if:
+      - repeated_unfamiliar_tasks_show_direct_solution_attempts
+        without_model_reconstruction
+
+  C2_evidence_driven_revision:
+    weakened_if:
+      - strong_counterevidence_is_repeatedly_ignored
+      - prior_conclusions_are_preserved_by_ad_hoc_explanations
+
+  H2_structural_cross_domain_transfer:
+    weakened_if:
+      - mappings_are_primarily_surface_analogies
+      - transferred_solutions_fail_target_domain_constraints
+
+  H3_explanation_as_validation:
+    weakened_if:
+      - explanation_occurs_only_after_reasoning_is_complete
+      - questioning_does_not_change_internal_models
+
+  generative_model:
+    weakened_if:
+      observed_capabilities_are_better_explained_by:
+        - domain_expertise
+        - tool_templates
+        - retrospective_narrative
+        - selection_bias
+
+
+# ============================================================
+# 9. CURRENT CONCLUSION
+# ============================================================
+
+conclusion:
+
+  strongest_supported_capabilities:
+    - explicit_model_construction
+    - evidence_driven_model_revision
+    - uncertainty_reasoning
+    - problem_externalization
+    - reusable_tool_construction
+
+  plausible_but_not_fully_established:
+    - structural_cross_domain_transfer
+    - explanation_as_model_validation
+    - knowledge_compression
+    - mental_simulation
+
+  current_best_explanation: >
+    Zen appears to be a model-oriented systems engineer who repeatedly
+    externalizes complex problem structures, reasons through competing
+    explanations, revises models from evidence, and converts recurring
+    reasoning or engineering friction into reusable representations
+    and tools.
+
+  confidence:
+    overall: medium_high
+
+  unresolved:
+    - degree_of_cross_domain_transfer
+    - degree_of_mental_simulation
+    - effect_of_domain_expertise
+    - selection_bias_in_available_history
+    - relationship_between_internal_reasoning_and_World_Slice
