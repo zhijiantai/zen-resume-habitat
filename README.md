@@ -61,11 +61,10 @@ The following projects and artifacts are referenced by the World Slice. URLs wil
 | 10 | CI / deployment tooling | Engineering automation |
 | 11 | Coding Blueprint | Context externalization and transfer |
 | 12 | World Slice | Structured reasoning artifact |
-| 13 | Habitat | Context reconstruction and persistence |
-| 14 | Specification-to-JIRA hackathon tool | Reusable developer tooling |
-| 15 | SEALer_G | Narrative coherence boundary / counterexample |
-| 16 | Kalman filtering → world-state reasoning | Cross-domain transfer hypothesis |
-| 17 | Control systems → AI reasoning | Cross-domain transfer hypothesis |
+| 13 | Specification-to-JIRA hackathon tool | Reusable developer tooling |
+| 14 | SEALer_G | Narrative coherence boundary / counterexample |
+| 15 | Kalman filtering → world-state reasoning | Cross-domain transfer hypothesis |
+| 16 | Control systems → AI reasoning | Cross-domain transfer hypothesis |
 
 ## Falsification Direction
 
