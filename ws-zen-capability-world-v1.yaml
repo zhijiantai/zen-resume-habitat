@@ -3,6 +3,9 @@ world_slice:
   type: evidence_derived_capability_model
   subject: Zen Tai
 
+  contact:
+    email: zhijian.tai@gmail.com
+
   purpose: >
     Reconstruct a third-person model of Zen's demonstrated capabilities
     from historical behavior, engineering artifacts, projects, and experiments.
