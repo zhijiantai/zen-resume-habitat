@@ -47,6 +47,8 @@ observations:
       - Cashflow Expected World vs Actual World
       - competing Minimart operational models
       - World Slice formalization
+      - Linux kernel World Slice: https://github.com/zhijiantai/WorldSlice
+      - DeepSeek harness World Slice: https://github.com/zhijiantai/deepseek-harness-worldslice
 
     temporal_note: >
       Similar structured reasoning behavior appears before the

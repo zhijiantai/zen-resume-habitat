@@ -65,6 +65,8 @@ The following projects and artifacts are referenced by the World Slice. URLs wil
 | 14 | [SEALer_G](https://github.com/zhijiantai/SEALer-G) | Narrative coherence boundary / counterexample |
 | 15 | Kalman filtering → world-state reasoning | Cross-domain transfer hypothesis |
 | 16 | Control systems → AI reasoning | Cross-domain transfer hypothesis |
+| 17 | [Linux kernel World Slice](https://github.com/zhijiantai/WorldSlice) | Systems architecture modeling |
+| 18 | [DeepSeek harness World Slice](https://github.com/zhijiantai/deepseek-harness-worldslice) | AI tooling and context externalization |
 
 ## Falsification Direction
 
