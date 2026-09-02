@@ -447,7 +447,8 @@ boundaries:
       whose conceptual completeness exceeds implementation evidence.
 
     known_case:
-      SEALer_G
+      project: SEALer_G
+      url: https://github.com/zhijiantai/SEALer-G
 
     observation: >
       Conceptual claims and intended architecture are stronger than
