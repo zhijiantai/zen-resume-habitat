@@ -200,12 +200,46 @@ world_slice:
       rule: Keep this separate from directly supported career facts.
 
   project_evidence:
-    - name: SEALer_G
-      url: https://github.com/zhijiantai/SEALer-G
-    - name: Linux kernel World Slice
+    - name: Linux_kernel_World_Slice
+      artifact_type: compiled_world_representation
       url: https://github.com/zhijiantai/WorldSlice
-    - name: DeepSeek harness World Slice
+      compiler_visibility: private
+      directly_demonstrates:
+        - structured_large_system_representation
+        - provenance_preserving_world_model
+        - bounded_context_construction
+      may_support:
+        - portable_agent_memory
+        - agent_handoff
+      does_not_demonstrate:
+        - Linux_kernel_code_contribution
+        - manual_authorship_of_all_YAML
+        - measured_token_reduction
+        - measured_compiler_performance
+
+    - name: DeepSeek_harness_World_Slice
+      artifact_type: compiled_system_understanding_artifact
       url: https://github.com/zhijiantai/deepseek-harness-worldslice
+      compiler_visibility: private
+      directly_demonstrates:
+        - unfamiliar_system_reconstruction
+        - structured_context_transfer
+      may_support:
+        - agent_handoff
+        - reusable_external_memory
+      does_not_demonstrate:
+        - DeepSeek_harness_code_contribution
+        - measured_efficiency_gain
+
+    - name: SEALer_G
+      artifact_type: research_and_prompt_artifact
+      url: https://github.com/zhijiantai/SEALer-G
+      directly_demonstrates:
+        - constrained_reasoning_research
+        - experimental_framing
+      does_not_demonstrate:
+        - substantial_runtime_implementation
+      preserve_existing_counterevidence: true
 
   cross_layer_relations:
     purpose: >

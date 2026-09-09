@@ -1,0 +1,370 @@
+world_slice:
+  id: zen-world-engineering-v1
+  type: system_level_world_slice_engineering_projection
+  subject: Zen's World Slice engineering system
+  target_repository: zen-resume-habitat
+
+  purpose: >
+    Describe World Slice as a bounded, provenance-linked and potentially
+    portable world representation, while separating public artifact evidence
+    from candidate-asserted private compiler claims and unmeasured performance.
+
+  epistemic_contract:
+    perspective: third_person
+    rules:
+      - distinguish design principles from implementation evidence
+      - distinguish candidate-asserted facts from public artifact evidence
+      - do not infer compiler speed, rebuild cost, token savings, or scalability
+      - do not infer manual authorship from public YAML size
+      - do not treat a World Slice as proof of source-code contribution
+      - preserve hypotheses as hypotheses
+      - allow source inspection when the current slice is insufficient
+
+  source_world_problem:
+    name: repeated_world_reconstruction_cost
+    description: >
+      Humans and AI agents repeatedly pay the cost of reconstructing the same
+      complex world from raw source, conversations, project state, or
+      operational history.
+    target: >
+      Reduce repeated reconstruction by making reasoning-critical structure
+      explicit, bounded, anchored to source evidence, and reusable.
+
+  world_slice_definition:
+    definition: >
+      A World Slice is a machine-readable, bounded reconstruction of a larger
+      source world. Its purpose is not merely to shorten information, but to
+      preserve enough reasoning-critical structure for another human or agent
+      to reason about the source world without reconstructing the whole world
+      from scratch.
+    representation:
+      - entities
+      - relations
+      - constraints
+      - state
+      - mechanisms
+      - provenance
+    distinction_from_summary:
+      summary:
+        transformation: information_to_shorter_information
+      world_slice:
+        transformation: large_implicit_world_to_smaller_explicit_reasoning_world
+
+  compiler_model:
+    existence: candidate_asserted
+    visibility: private
+    role: >
+      Constructs World Slice artifacts from larger source worlds. Public YAML
+      artifacts are treated as compiler outputs under this candidate-asserted
+      model and must not be assumed to represent a fully manual authoring
+      workflow.
+    public_evidence_boundary:
+      known:
+        - a private World Slice Compiler is asserted to exist
+        - the compiler is asserted to have been used to construct World Slice artifacts
+      not_publicly_established:
+        - exact_build_time
+        - exact_rebuild_time
+        - exact_human_review_time
+        - incremental_rebuild_characteristics
+        - quantitative_scalability
+        - token_savings_percentage
+    wording_rule: >
+      Do not estimate missing performance numbers. Do not infer manual
+      construction or rebuild time from YAML size.
+
+  bounded_world_model:
+    purpose: >
+      Reduce the effective reasoning space while preserving the structures
+      required for the target class of questions.
+    optimization_goal: >
+      Minimize irrelevant world complexity while keeping the true solution
+      reachable for the intended reasoning scope.
+    invariant: >
+      Internal consistency of a bounded world does not imply that the bounded
+      world correctly represents the source world.
+    failure_mode:
+      wrong_boundary:
+        consequence: true_solution_may_be_excluded
+    escape_path:
+      allowed_actions:
+        - request_source_inspection
+        - verify_provenance
+        - expand_scope
+        - construct_another_slice
+      rule: >
+        Missing information in the current slice must not automatically be
+        treated as nonexistent information in the source world.
+
+  provenance_as_real_world_anchor:
+    short_name: PROV
+    role: real_world_anchor
+    definition: >
+      PROV is the anchoring coordinate between a reconstructed virtual world
+      and observations or artifacts in the real/source world.
+    topology: |
+      REAL WORLD / SOURCE
+            ^
+            |
+           PROV
+            |
+            v
+      VIRTUAL WORLD SLICE
+    purposes:
+      - bind_virtual_entities_to_source_evidence
+      - bind_relations_to_source_evidence
+      - bind_state_to_source_evidence
+      - permit_verification
+      - permit_source_reinspection
+      - detect_contradictions
+      - realign_the_virtual_world_when_it_drifts
+    invariant: >
+      Provenance is not merely citation metadata. It is the mechanism by which
+      an agent can test whether the reconstructed world remains aligned with
+      the source world.
+
+  portable_memory:
+    role: reusable_reconstructed_world_state
+    description: >
+      A World Slice can externalize reconstructed context so that understanding
+      does not remain trapped inside one transient agent context or conversation.
+    possible_transfer:
+      - same_agent_across_sessions
+      - one_agent_to_another_agent
+      - agent_to_human
+      - human_to_agent
+    mechanism: |
+      Agent / Compiler reconstructs world
+                     |
+                     v
+                World Slice
+                     |
+            +--------+--------+
+            |        |        |
+            v        v        v
+          Agent A  Agent B   Human
+    expected_benefits:
+      epistemic_status: hypothesis
+      items:
+        - reduce_repeated_world_reconstruction
+        - reduce_repeated_context_loading
+        - lower_repeated_token_requirements
+        - improve_agent_reentry
+        - preserve_reasoning_context_across_sessions
+    quantitative_boundary: >
+      No exact token reduction, break-even query count, or runtime saving is
+      currently claimed because no public benchmark is available.
+
+  agent_to_agent_protocol:
+    status: design_potential_supported_by_artifacts
+    hypothesis: >
+      World Slice can act as a structured agent-to-agent communication protocol
+      for exchanging reconstructed worlds rather than only exchanging prose
+      conclusions.
+    comparison:
+      prose_handoff: |
+        Agent A world
+            -> Agent A summary
+            -> Agent B interprets summary
+            -> Agent B reconstructs world
+      world_slice_handoff: |
+        Agent A / compiler
+            -> explicit entities / relations / constraints / state / PROV
+            -> Agent B
+            -> reason / verify / challenge / extend
+    intended_advantage: >
+      The receiving agent can inspect both the reconstructed world and its
+      supporting anchors, rather than receiving only a previous agent's
+      narrative conclusion.
+    evidence_boundary: >
+      These examples support the representation and transfer concept. They do
+      not establish universal interoperability, measured token efficiency, or
+      a standardized industry protocol.
+
+  related_systems:
+    World_Slice_Compiler:
+      answers: how_is_the_world_constructed
+    World_Slice:
+      answers:
+        - how_is_the_world_represented
+        - how_can_the_world_be_transferred
+        - how_can_reasoning_be_bounded
+    PROV:
+      answers: how_is_the_virtual_world_anchored_to_source_reality
+    Habitat:
+      answers:
+        - how_does_project_world_state_persist
+        - how_can_an_agent_reenter_a_previous_world
+    Coding_Blueprint:
+      answers: >
+        How is the task-relevant portion of a larger engineering world
+        projected into an implementation context for another developer or
+        agent.
+    unifying_engineering_pattern:
+      status: capability_hypothesis
+      statement: >
+        Zen repeatedly works on the cost of reconstructing complex worlds:
+        making them explicit, bounded, anchored, portable, persistent, and
+        reusable by humans or AI agents.
+      manifestations:
+        - World_Slice
+        - World_Slice_Compiler
+        - Coding_Blueprint
+        - Habitat
+      important_boundary: >
+        These systems are not asserted to be implemented to the same level.
+        Preserve separate implementation evidence and provenance for each.
+
+  public_artifact_evidence:
+    - name: Linux_kernel_World_Slice
+      artifact_type: compiled_world_representation
+      public_repo: https://github.com/zhijiantai/WorldSlice
+      compiler_visibility: private
+      directly_demonstrates:
+        - structured_large_system_representation
+        - provenance_preserving_world_model
+        - bounded_context_construction
+      may_support:
+        - portable_agent_memory
+        - agent_handoff
+      does_not_demonstrate:
+        - Linux_kernel_code_contribution
+        - manual_authorship_of_all_YAML
+        - measured_token_reduction
+        - measured_compiler_performance
+
+    - name: DeepSeek_harness_World_Slice
+      artifact_type: compiled_system_understanding_artifact
+      public_repo: https://github.com/zhijiantai/deepseek-harness-worldslice
+      compiler_visibility: private
+      directly_demonstrates:
+        - unfamiliar_system_reconstruction
+        - structured_context_transfer
+      may_support:
+        - agent_handoff
+        - reusable_external_memory
+      does_not_demonstrate:
+        - DeepSeek_harness_code_contribution
+        - measured_efficiency_gain
+
+    - name: SEALer_G
+      artifact_type: research_and_prompt_artifact
+      public_repo: https://github.com/zhijiantai/SEALer-G
+      directly_demonstrates:
+        - constrained_reasoning_research
+        - experimental_framing
+      does_not_demonstrate:
+        - substantial_runtime_implementation
+      preserve_existing_counterevidence: true
+
+  claims_vs_hypotheses:
+    candidate_asserted_fact:
+      - private_compiler_exists
+      - public_YAML_are_compiler_outputs
+    design_fact:
+      - World_Slice_represents_a_bounded_world
+    design_principle:
+      - PROV_anchors_virtual_world_to_source
+    intended_capability:
+      - World_Slice_supports_cross_session_memory
+    supported_design_potential:
+      - World_Slice_supports_agent_to_agent_world_transfer
+    supported_by_public_artifacts:
+      - Linux_and_DeepSeek_are_examples_of_transferable_world_artifacts
+    plausible_hypothesis:
+      - token_savings_are_large
+    unknown:
+      - compiler_is_fast
+      - rebuild_is_cheap
+      - exact_token_savings
+    not_established:
+      - universal_agent_protocol
+
+  known_boundaries:
+    wrong_world_boundary:
+      risk: >
+        Compression or scoping can remove the relation or state required for
+        the true answer.
+      mitigation:
+        - scope_expansion
+        - provenance_reinspection
+        - source_fallback
+    virtual_world_drift:
+      risk: >
+        A World Slice may remain internally coherent while diverging from its
+        source world.
+      mitigation:
+        - PROV
+        - contradiction_detection
+        - source_verification
+        - rebuild_or_realign
+    stale_world:
+      risk: >
+        Source-world changes can make a previously valid slice stale.
+      current_public_status: >
+        Rebuild cost and update strategy are not quantitatively documented.
+      rule: do_not_estimate
+    protocol_overclaim:
+      risk: >
+        Transferable structured artifacts do not establish a universal agent
+        interoperability protocol.
+      required_status: potential_or_hypothesis
+    token_efficiency_overclaim:
+      risk: >
+        Reuse plausibly reduces repeated context reconstruction, but no public
+        benchmark establishes the exact magnitude.
+      required_status: hypothesis
+
+  unresolved_measurements:
+    - exact_build_time
+    - exact_rebuild_time
+    - exact_human_review_time
+    - incremental_rebuild_characteristics
+    - quantitative_scalability
+    - token_savings_percentage
+    - break_even_query_count
+    - runtime_saving
+
+  acceptance_tests:
+    manual_authorship:
+      expected: >
+        Do not assume that Linux World Slice YAML was manually written by
+        reading the whole kernel. The repository records a candidate-asserted
+        private compiler claim; exact automation and human-review costs are
+        not publicly measured.
+    summary_misclassification:
+      expected: >
+        A summary primarily shortens information. A World Slice attempts to
+        reconstruct a smaller explicit world preserving reasoning-critical
+        entities, relations, constraints, state, and provenance.
+    provenance:
+      expected: >
+        PROV anchors the virtual reconstructed world to source reality and
+        enables verification, contradiction detection, and realignment.
+    agent_memory:
+      expected: >
+        World Slice is intended as reusable external world state that can be
+        loaded by another session, human, or agent.
+    agent_protocol:
+      expected: >
+        It is a supported design potential, not an established universal
+        interoperability protocol.
+    token_claim:
+      expected: >
+        The mechanism predicts lower repeated context reconstruction cost, but
+        no exact reduction is supported by public benchmark data.
+    rebuild_cost:
+      expected: >
+        Unknown from public evidence. Do not infer manual rebuild time from YAML
+        size because a private compiler is part of the asserted construction path.
+    project_interpretation:
+      expected: >
+        WorldSlice demonstrates a compiled structured representation of the
+        Linux source world, not Linux kernel source-code contribution.
+
+  final_invariant: >
+    World Slice should be understood as part of a broader machine-readable
+    world-engineering approach: construct the world, bound it, anchor it to
+    reality, persist or transfer it, and allow another intelligence to reason
+    from it. The repository must communicate this mechanism without inventing
+    quantitative performance evidence.

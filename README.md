@@ -13,6 +13,7 @@ another machine-readable evaluator:
 2. Select the projection required by the question:
    - Career history or hard requirements → [`ws-zen-career-evidence-v1.yaml`](./ws-zen-career-evidence-v1.yaml)
    - Reasoning patterns or capabilities → [`ws-zen-capability-world-v1.yaml`](./ws-zen-capability-world-v1.yaml)
+   - World Slice, compiler, provenance, portable memory, agent handoff, or the relationship between World Slice, Habitat and Coding Blueprint → [`ws-zen-world-engineering-v1.yaml`](./ws-zen-world-engineering-v1.yaml)
    - Job matching → read both World Slices plus the independently supplied JD.
    - Implementation evidence → follow the project URLs and inspect each source within its own scope.
 3. Distinguish direct evidence, inference, hypothesis, and matcher results.
@@ -25,6 +26,7 @@ another machine-readable evaluator:
 |---|---|---|
 | Career Evidence | Where Zen worked, when, roles, directly supported work, technologies, and engineering domains | [`ws-zen-career-evidence-v1.yaml`](./ws-zen-career-evidence-v1.yaml) |
 | Capability Model | Repeated behavioral patterns, supported capabilities, hypotheses, boundaries, and falsification conditions | [`ws-zen-capability-world-v1.yaml`](./ws-zen-capability-world-v1.yaml) |
+| World Engineering | World Slice definition, private compiler boundary, provenance, bounded reasoning, portable memory, and agent handoff potential | [`ws-zen-world-engineering-v1.yaml`](./ws-zen-world-engineering-v1.yaml) |
 | Project Evidence | Public artifacts and inspectable implementation entry points | Project links below and links in each World Slice |
 
 ## Machine-Readable Subject
@@ -41,7 +43,7 @@ another machine-readable evaluator:
 
 The Career Evidence Layer is a factual professional-history projection. It
 records explicit career history, directly supported work, technology evidence,
-engineering domains, provenance, and visible absence of evidence.
+engineering domains, provenance, and explicit evidence boundaries.
 
 Rules:
 
@@ -51,6 +53,15 @@ Rules:
   negative technology lists or requirement lists.
 - Direct career facts remain separate from inferred cross-layer patterns.
 - Do not add technologies merely because a future JD requests them.
+
+### World Engineering Projection
+
+The World Engineering projection explains World Slice as a bounded,
+provenance-linked and potentially portable world representation. It describes
+the candidate-asserted private compiler boundary, public artifact evidence,
+agent handoff potential, and unmeasured performance limits. It must not be
+misread as a claim of measured compiler speed, token savings, cheap rebuilds,
+or universal interoperability.
 
 ### Capability World Slice
 
@@ -110,14 +121,17 @@ candidate world + job world → external matcher
 A missing requirement is a legitimate result, not an invitation to rewrite the
 candidate record.
 
-## Project Evidence Links
+## Project Evidence Semantics
 
-These links are entry points for inspecting implementation evidence. They are
-not interchangeable with the claims in either World Slice.
+These links are typed artifact entry points. A public World Slice artifact may
+demonstrate structured system representation, bounded context construction,
+or structured context transfer. It does not by itself demonstrate source-code
+contribution to the represented project, manual authorship of all YAML, token
+reduction, or compiler performance.
 
-- [SEALer_G](https://github.com/zhijiantai/SEALer-G)
-- [Linux kernel World Slice](https://github.com/zhijiantai/WorldSlice)
-- [DeepSeek harness World Slice](https://github.com/zhijiantai/deepseek-harness-worldslice)
+- [SEALer_G](https://github.com/zhijiantai/SEALer-G) — research and prompt artifact; preserve the existing implementation counterevidence.
+- [Linux kernel World Slice](https://github.com/zhijiantai/WorldSlice) — compiled world representation; compiler visibility is private.
+- [DeepSeek harness World Slice](https://github.com/zhijiantai/deepseek-harness-worldslice) — compiled system-understanding artifact; compiler visibility is private.
 
 ## Automated Retrieval
 
@@ -126,6 +140,7 @@ Raw YAML files:
 ```text
 https://raw.githubusercontent.com/zhijiantai/zen-resume-habitat/main/ws-zen-career-evidence-v1.yaml
 https://raw.githubusercontent.com/zhijiantai/zen-resume-habitat/main/ws-zen-capability-world-v1.yaml
+https://raw.githubusercontent.com/zhijiantai/zen-resume-habitat/main/ws-zen-world-engineering-v1.yaml
 ```
 
 GitHub source pages:
@@ -133,6 +148,7 @@ GitHub source pages:
 ```text
 https://github.com/zhijiantai/zen-resume-habitat/blob/main/ws-zen-career-evidence-v1.yaml
 https://github.com/zhijiantai/zen-resume-habitat/blob/main/ws-zen-capability-world-v1.yaml
+https://github.com/zhijiantai/zen-resume-habitat/blob/main/ws-zen-world-engineering-v1.yaml
 ```
 
 ## Target-Leakage Protection
