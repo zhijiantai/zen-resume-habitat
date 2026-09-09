@@ -1,0 +1,233 @@
+world_slice:
+  id: zen-career-evidence-v1
+  type: factual_career_evidence_projection
+  subject: Tai Jia Chean
+  preferred_name: Zen
+  target_repository: zen-resume-habitat
+
+  purpose: >
+    Preserve a factual, candidate-provided professional-history layer that
+    an external evaluator can compare against an independently supplied job
+    description without modifying the capability model or encoding a target JD.
+
+  epistemic_contract:
+    perspective: third_person
+    provenance:
+      type: candidate_provided_professional_history
+      source: LinkedIn experience record
+      verification_status: candidate_asserted
+      note: >
+        These records are professional-history evidence supplied by the
+        candidate. They are not silently upgraded to independently verified
+        employer records.
+    rules:
+      - direct career facts must remain separate from inference
+      - technology duration must not be inferred from total career duration
+      - capability hypotheses must not be presented as career facts
+      - project links are evidence entry points, not proof of every claim
+
+  career_span:
+    first_professional_role: 2009-09
+    reference_date: 2026-09
+    professional_software_engineering_experience: approximately_17_years
+    calculation_rule: >
+      Derive the span from the first professional role to the reference date.
+      Do not sum role-duration labels because adjacent roles may share boundary
+      months.
+
+  experience:
+    - organization: Bank of America Merrill Lynch
+      location: Singapore
+      employment_type: full_time
+      period:
+        start: 2018-08
+        end: present
+      roles:
+        - title: Software Engineer — Regulatory Reporting
+          period:
+            start: 2024-02
+            end: present
+          directly_supported_work:
+            - Regulatory reporting systems development using Python.
+            - Multi-jurisdiction regulatory reporting and trade-data workflows.
+            - Translation of regulatory requirements into system rules and implementation.
+            - Production debugging, data investigation, and issue resolution.
+            - Work across upstream and downstream systems.
+            - Collaboration with global teams.
+            - Technical guidance and code review for distributed development teams.
+
+        - title: FICC Front Desk Developer in FX
+          period:
+            start: 2018-08
+            end: 2024-02
+          directly_supported_work:
+            - FX front-office development on Quartz using Python.
+            - Spot, Forward, and Swap booking, novation, and integration.
+            - Legacy-system migration to Quartz.
+            - CFETS and SCH novation workflows.
+            - Production debugging.
+            - UAT and releases.
+            - Internal automation.
+            - Dialogflow chatbot.
+
+    - organization: Ctrlworks
+      title: Python Developer
+      location: Singapore
+      period:
+        start: 2012-09
+        end: 2018-07
+      directly_supported_work:
+        - High-frequency and real-time data processing.
+        - IO-bound software engineering.
+        - Event-driven architecture.
+        - Systems operating across Wi-Fi roaming and 4G environments.
+        - Cloud-oriented software architecture.
+        - Hardware/software integration.
+        - Motor and sensor control.
+        - Remote robot control.
+        - Collaboration with autonomous-behavior engineers.
+
+    - organization: Pechora Technologies
+      title: Java Developer
+      location: Singapore
+      period:
+        start: 2012-05
+        end: 2012-09
+      directly_supported_work:
+        - Continuous integration.
+        - Distributed-platform performance tuning.
+        - Throughput optimization.
+        - PostgreSQL benchmarking.
+        - Automated remote deployment.
+        - Cross-service and cross-server dependency handling.
+
+    - organization: ValueSYS
+      title: Django Developer
+      location: Johor, Malaysia
+      period:
+        start: 2011-04
+        end: 2012-05
+      directly_supported_work:
+        - Product architecture.
+        - Security and data-encryption requirements.
+        - Software update mechanisms.
+        - Development and release environments.
+        - Project and product planning.
+        - Delivery responsibility.
+      product_domains:
+        - point_of_sale
+        - document_management
+        - web_information_retrieval
+        - dermatoglyphics_analysis
+        - loan_systems
+
+    - organization: Ubitus
+      title: Java Developer
+      location: Taipei, Taiwan
+      period:
+        start: 2009-09
+        end: 2011-04
+      directly_supported_work:
+        - Cloud-computing performance analysis.
+        - Automated log analysis and visualization.
+        - Scheduling-strategy development.
+        - Performance optimization.
+        - Website-parsing automation.
+
+  technology_evidence:
+    rule: >
+      Technology evidence is derived only from explicit career records or
+      inspectable project artifacts. Duration is not inferred from total career
+      length.
+    directly_supported:
+      Python:
+        evidence:
+          - Bank of America Merrill Lynch
+          - Ctrlworks
+        duration_claim:
+          status: supported_for_more_than_5_years
+      Java:
+        evidence:
+          - Ubitus
+          - Pechora Technologies
+        duration_claim:
+          status: do_not_claim_5_plus_years_from_current_evidence
+      Django:
+        evidence:
+          - ValueSYS
+        duration_claim:
+          status: not_calculated
+      Quartz:
+        evidence:
+          - Bank of America Merrill Lynch
+        duration_claim:
+          status: not_calculated
+      PostgreSQL:
+        evidence:
+          - Pechora Technologies
+        duration_claim:
+          status: not_calculated
+      Dialogflow:
+        evidence:
+          - Bank of America Merrill Lynch
+        duration_claim:
+          status: not_calculated
+  engineering_domains:
+    directly_supported:
+      - cloud_computing
+      - distributed_systems
+      - real_time_systems
+      - event_driven_systems
+      - robotics
+      - financial_markets
+      - FX_front_office
+      - regulatory_reporting
+      - production_debugging
+      - developer_tooling_and_automation
+    inferred_pattern:
+      claim: >
+        Zen's career repeatedly involves systems in which information moves
+        across multiple components, timing or throughput matters, and failures
+        require reasoning across system boundaries.
+      epistemic_status: inference
+      confidence: high
+      supporting_periods:
+        - Ubitus cloud systems
+        - Pechora distributed platform
+        - Ctrlworks real-time robotics
+        - Bank of America FX
+        - Bank of America regulatory reporting
+      rule: Keep this separate from directly supported career facts.
+
+  project_evidence:
+    - name: SEALer_G
+      url: https://github.com/zhijiantai/SEALer-G
+    - name: Linux kernel World Slice
+      url: https://github.com/zhijiantai/WorldSlice
+    - name: DeepSeek harness World Slice
+      url: https://github.com/zhijiantai/deepseek-harness-worldslice
+
+  cross_layer_relations:
+    purpose: >
+      Career evidence may support an existing capability claim only through an
+      explicit relation. Historical facts must not be rewritten to fit a claim.
+    relations:
+      - capability: reusable_tool_construction
+        historical_support:
+          - period: Ubitus
+            behavior: automated performance-analysis tooling
+          - period: Pechora Technologies
+            behavior: continuous-integration and remote-deployment tooling
+          - period: Bank of America Merrill Lynch
+            behavior: internal automation
+          - period: recent_AI_work
+            behavior:
+              - Coding Blueprint
+              - World Slice
+              - Habitat
+        inference: >
+          Reusable-tool construction appears repeatedly across a long
+          professional time span rather than only during recent AI work.
+        status: supported_pattern
+
+
