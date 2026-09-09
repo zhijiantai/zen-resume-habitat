@@ -11,7 +11,7 @@ world_slice:
     from historical behavior, engineering artifacts, projects, and experiments.
 
   non_goals:
-    - job_fit_evaluation
+    - inferring_job_fit_without_an_external_job_description
     - personality_classification
     - self_promotion
     - psychological_diagnosis

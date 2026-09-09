@@ -173,7 +173,7 @@ world_slice:
         duration_claim:
           status: not_calculated
   engineering_domains:
-    directly_supported:
+    derived_from_direct_evidence:
       - cloud_computing
       - distributed_systems
       - real_time_systems
@@ -221,6 +221,7 @@ world_slice:
           - period: Bank of America Merrill Lynch
             behavior: internal automation
           - period: recent_AI_work
+            provenance_ref: artifact_provenance.recent_AI_work
             behavior:
               - Coding Blueprint
               - World Slice
@@ -229,5 +230,20 @@ world_slice:
           Reusable-tool construction appears repeatedly across a long
           professional time span rather than only during recent AI work.
         status: supported_pattern
+
+    artifact_provenance:
+      recent_AI_work:
+        source_class: separate_artifact_provenance
+        source_references:
+          - artifact: Coding Blueprint
+            evidence_scope: reusable tool and workflow construction
+          - artifact: World Slice
+            evidence_scope: externalized model and reasoning structure
+          - artifact: Habitat
+            evidence_scope: persistent context and state externalization
+        provenance_note: >
+          These artifacts are independent of the LinkedIn career-history
+          provenance above. They must not be treated as evidence from any
+          listed employer or employment period.
 
 
